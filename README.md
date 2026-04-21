@@ -32,7 +32,7 @@ The main goal is to demonstrate text classification on social media data from Re
 
 ## Data
 The notebook expects Reddit data in CSV format with text content and labels for classification.
-
+https://www.kaggle.com/datasets/mswarbrickjones/reddit-selfposts/data (Pre merge dataset)
 ## Models
 - **Naive Bayes**: Traditional probabilistic classifier
 - **Logistic Regression**: Linear model for classification
