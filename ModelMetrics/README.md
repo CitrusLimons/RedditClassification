@@ -24,7 +24,7 @@ A confusion matrix is generated for each model to visualize prediction performan
 - Off-diagonal values indicate **misclassifications**
 
 ### Saved Files
-
+For better viewing, please download the PNGs.
 - `transformer_cm.png`
 - `nb_cm.png`
 - `lr_cm.png`
