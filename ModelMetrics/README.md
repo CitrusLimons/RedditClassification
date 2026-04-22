@@ -25,9 +25,9 @@ A confusion matrix is generated for each model to visualize prediction performan
 
 ### Saved Files
 
-- `results/transformer_cm.png`
-- `results/nb_cm.png`
-- `results/lr_cm.png`
+- `transformer_cm.png`
+- `nb_cm.png`
+- `lr_cm.png`
 
 These plots help identify:
 - Which classes are frequently confused
@@ -41,15 +41,15 @@ These plots help identify:
 For each model, a classification report is printed containing:
 
 - **Precision**  
-  \( \text{Precision} = \frac{TP}{TP + FP} \)  
+  Precision = TP / (TP + FP)  
   Measures how many predicted positives are actually correct.
 
 - **Recall**  
-  \( \text{Recall} = \frac{TP}{TP + FN} \)  
+  Recall = TP / (TP + FN)  
   Measures how many actual positives are correctly identified.
 
 - **F1-score**  
-  \( F1 = 2 \cdot \frac{Precision \cdot Recall}{Precision + Recall} \)  
+  F1 = 2 * (Precision * Recall) / (Precision + Recall)  
   Harmonic mean of precision and recall.
 
 - **Support**  
