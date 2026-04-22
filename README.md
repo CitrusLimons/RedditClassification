@@ -40,3 +40,20 @@ https://www.kaggle.com/datasets/mswarbrickjones/reddit-selfposts/data (Pre merge
 
 ## Output
 The notebook generates classification reports, accuracy metrics, and comparative analysis of model performance.
+
+## Model Performance
+Transformer (DistilBERT)
+P@1: 89.9%
+P@3: 97.3%
+P@5: 98.5%
+
+Linear Regression
+P@1: 0.6372
+P@3: 0.8423
+P@5: 0.9047
+
+Naive Bayes
+P@1: 0.5467
+P@3: 0.7779
+P@5: 0.8576
+
