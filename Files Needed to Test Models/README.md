@@ -1,16 +1,19 @@
 # Reddit Classifier
 
-This is a small Python script that reads a Reddit post and predicts its category using 3 different models:
-
-- Transformer model
+## Overview
+This script takes a Reddit post as input and predicts its category using three different models:
+- Transformer (DistilBERT)
 - Naive Bayes
 - Logistic Regression
 
-It prints the predicted label and the top 5 guesses for each model.
+For each model, it outputs:
+- The predicted label  
+- The top 5 most likely categories  
 
-## Files needed
+---
 
-Put these files in the same folder as the script:
+## Required Files
+Place all of the following files in the same folder as the script:
 
 - `config.json`
 - `model.safetensors`
@@ -20,33 +23,42 @@ Put these files in the same folder as the script:
 - `nb_model.pkl`
 - `lr_model.pkl`
 
-## Install packages
+---
+
+## Installation
+Install the required packages:
 
 ```bash
 pip install torch transformers joblib numpy
 ```
 
-## How to run
+---
 
-1. Open a terminal in the folder with the script.
+## Running the Script
+
+1. Open a terminal in the project folder  
 2. Run:
 
 ```bash
-python your_script_name.py
+python classifier.py
 ```
 
-3. Paste in a Reddit post.
-4. Press Enter on a blank line to run the prediction.
-5. Type `q` and press Enter to quit.
+3. Paste a Reddit post (supports multiple lines)  
+4. Press Enter on a blank line to submit  
+5. Type `q` and press Enter to exit  
 
-## What it does
+---
 
-- Loads the saved transformer model and tokenizer.
-- Loads the Naive Bayes and Logistic Regression models.
-- Lets you paste in multiple lines of text.
-- Shows the predicted category from each model.
+## Functionality
+- Loads the trained transformer model and tokenizer  
+- Loads saved Naive Bayes and Logistic Regression models  
+- Accepts multi-line user input  
+- Generates predictions from all three models  
+- Displays top 5 predicted categories for each model  
+
+---
 
 ## Notes
-
-- The script uses GPU if CUDA is available, otherwise it uses CPU.
-- All the model files have to be in the same folder or it will fail at startup.
+- Uses GPU automatically if CUDA is available; otherwise runs on CPU  
+- All required files must be in the same directory as the script  
+- The script will fail at startup if any required file is missing  
