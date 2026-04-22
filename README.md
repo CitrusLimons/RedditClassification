@@ -1,63 +1,118 @@
 # Reddit Text Classification Project
 
 ## Overview
-Machine learning pipeline for classifying Reddit posts/comments. Processes text data, applies preprocessing, trains multiple models, and compares performance.
+This project implements a machine learning pipeline for classifying Reddit posts and comments. It includes data preprocessing, feature extraction, model training, and performance comparison across multiple approaches.
 
 ## Purpose
-Demonstrates text classification on Reddit social media data, comparing traditional ML (Naive Bayes, Logistic Regression) vs. modern transformers (DistilBERT).
+The goal is to demonstrate text classification on Reddit data by comparing:
+- Traditional machine learning models (Naive Bayes, Logistic Regression)
+- Transformer-based models (DistilBERT)
+
+---
 
 ## Features
-- CSV data loading and preprocessing
-- Text cleaning and feature extraction
+- CSV data loading and preprocessing  
+- Text cleaning and feature extraction  
 - Multi-model training:
-  - Naive Bayes
-  - Logistic Regression
-  - DistilBERT (transformer)
-- Model evaluation and comparison
-- Results visualization
-- Interactive demo script
+  - Naive Bayes  
+  - Logistic Regression  
+  - DistilBERT (Transformer)  
+- Model evaluation and comparison  
+- Results visualization  
+- Interactive classification script  
 
-## Quick Demo
-**Files needed** (in same folder as script):
+---
 
-**Install:**
+## Dataset Split & Evaluation
+The dataset is split into three parts:
+- Training set  
+- Validation set  
+- Testing set  
+
+All reported results are computed on the **test set (15% of the total data set)**.
+
+---
+
+## Quick Demo (Classifier)
+
+### Requirements
 ```bash
 pip install torch transformers joblib numpy pandas scikit-learn matplotlib seaborn
 ```
 
-**Run:**
-```bash
-python demo.py
+### Setup
+The classifier script requires all model files located in:
+
 ```
-Paste Reddit post → Enter → See predictions from all 3 models.
+Files Needed to Test Models/
+```
+
+This folder must contain:
+- `config.json`
+- `model.safetensors`
+- `tokenizer.json`
+- `tokenizer_config.json`
+- `labels.pkl`
+- `nb_model.pkl`
+- `lr_model.pkl`
+
+### Run
+```bash
+python classifier.py
+```
+
+### Usage
+1. Paste a Reddit post (can be multiple lines)  
+2. Press Enter on a blank line  
+3. View predictions from all three models  
+4. Type `q` to quit  
+
+---
 
 ## Results Summary
-| Model | P@1 | P@3 | P@5 |
-|-------|-----|-----|-----|
-| **DistilBERT** | **89.9%** | **97.3%** | **98.5%** |
-| Logistic Regression | 63.7% | 84.2% | 90.5% |
-| Naive Bayes | 54.7% | 77.8% | 85.8% |
+
+| Model                  | P@1   | P@3   | P@5   |
+|------------------------|-------|-------|-------|
+| **DistilBERT**         | **89.9%** | **97.3%** | **98.5%** |
+| Logistic Regression    | 63.7% | 84.2% | 90.5% |
+| Naive Bayes            | 54.7% | 77.8% | 85.8% |
+
+---
 
 ## Full Training Pipeline
-**Notebook Usage:**
-1. Open `training_notebook.ipynb` in Jupyter/Colab
-2. Run cells sequentially:
-   - Load Reddit dataset
-   - Preprocess text
-   - Train all 3 models
-   - Generate results + visualizations
-3. Save models to `Files Needed to Test Models/`
 
-**Data:** [Reddit Selfposts Dataset](https://www.kaggle.com/datasets/mswarbrickjones/reddit-selfposts)
+### Notebook Usage
+1. Open `training_notebook.ipynb` in Jupyter or Google Colab  
+2. Run cells sequentially:
+   - Load Reddit dataset  
+   - Preprocess text  
+   - Train all three models  
+   - Generate results and visualizations  
+3. Export trained models to:
+
+```
+Files Needed to Test Models/
+```
+
+### Dataset
+https://www.kaggle.com/datasets/mswarbrickjones/reddit-selfposts
+
+---
 
 ## Models
-| Model | Type | Description |
-|-------|------|-------------|
-| **DistilBERT** | Transformer | Lightweight transformer for advanced NLP |
-| **Logistic Regression** | Linear | Linear classification model |
-| **Naive Bayes** | Probabilistic | Traditional text classifier |
 
-## Requirementstorch
+| Model                  | Type            | Description                              |
+|------------------------|-----------------|------------------------------------------|
+| **DistilBERT**         | Transformer     | Lightweight transformer for NLP tasks    |
+| Logistic Regression    | Linear Model    | Efficient linear classifier              |
+| Naive Bayes            | Probabilistic   | Baseline text classification model       |
+
+---
+
+## Requirements
+
+```
+torch
 transformers
 joblib
 numpy
@@ -66,16 +121,21 @@ scikit-learn
 matplotlib
 seaborn
 jupyter
+```
+
+---
 
 ## Output
-- Classification reports (P@1, P@3, P@5 metrics)
-- Confusion matrices
-- Model comparison tables
-- Saved models for demo
-- Performance visualizations
+- Precision@K metrics (P@1, P@3, P@5)  
+- Confusion matrices  
+- Model comparison tables  
+- Saved models for inference  
+- Performance visualizations  
+
+---
 
 ## Notes
-- GPU supported (auto-detects CUDA)
-- Reproducible results (fixed seeds)
-- Multi-class Reddit subreddit prediction
-- Ready for oral presentation + final report
+- Uses GPU if CUDA is available, otherwise runs on CPU  
+- Fixed random seeds for reproducibility  
+- Multi-class subreddit classification  
+- Classifier script requires all model files in the same directory  
