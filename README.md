@@ -2,7 +2,7 @@
 
 ## Overview
 This project implements a machine learning pipeline for classifying Reddit posts and comments. It includes data preprocessing, feature extraction, model training, and performance comparison across multiple approaches.
-
+Link to test the model yourself: https://huggingface.co/spaces/CitrusLimons/Reddit_Post_Classifier
 ## Purpose
 The goal is to demonstrate text classification on Reddit data by comparing:
 - Traditional machine learning models (Naive Bayes, Logistic Regression)
@@ -106,7 +106,6 @@ https://www.kaggle.com/datasets/mswarbrickjones/reddit-selfposts
 | Naive Bayes            | Probabilistic   | Baseline text classification model       |
 
 ---
-
 ## Requirements
 
 ```
