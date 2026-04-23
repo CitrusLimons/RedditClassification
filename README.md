@@ -72,8 +72,8 @@ python classifier.py
 | Model                  | P@1   | P@3   | P@5   |
 |------------------------|-------|-------|-------|
 | **DistilBERT**         | **89.9%** | **97.3%** | **98.5%** |
-| Logistic Regression    | 72.3% | 89.4% | 93.8% |
-| Naive Bayes            | 65.2% | 85.8% | 91.7% |
+| Logistic Regression    | 71.4% | 88.9% | 93.5% |
+| Naive Bayes            | 64.0% | 84.9% | 91.1% |
 
 ---
 
