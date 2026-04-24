@@ -48,10 +48,6 @@ Files Needed to Test Models
 - `labels.pkl`
 - `nb_model.pkl`
 - `lr_model.pkl`
-
-### Run
-```bash
-python classifier.py
 ```
 
 ### Usage
