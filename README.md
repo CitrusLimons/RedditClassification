@@ -42,10 +42,7 @@ pip install torch transformers joblib numpy pandas scikit-learn matplotlib seabo
 The classifier script requires all model files located in:
 
 ```
-Files Needed to Test Models/
-```
-
-This folder must contain:
+Files Needed to Test Models
 - `config.json`
 - `model.safetensors`
 - `tokenizer.json`
