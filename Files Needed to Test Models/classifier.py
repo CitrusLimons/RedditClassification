@@ -23,7 +23,7 @@ class RedditClassifier:
         labels_data = joblib.load(os.path.join(model_path, "labels.pkl"))
         self.id2label = {v: k for k, v in labels_data["label2id"].items()}
         
-        self.nb_pipeline = joblib.load(os.path.join(model_path, "nb_baseline_model.pkl"))
+        self.nb_pipeline = joblib.load(os.path.join(model_path, "nb_model.pkl"))
         self.lr_pipeline = joblib.load(os.path.join(model_path, "lr_model.pkl"))
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
